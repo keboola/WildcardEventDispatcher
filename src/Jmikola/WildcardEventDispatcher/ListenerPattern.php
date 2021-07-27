@@ -132,16 +132,16 @@ class ListenerPattern
         if (PHP_VERSION_ID >= 70300) {
             self::$replacements += [
                 // Multi-wildcard with separator prefix
-                '/\\\\\.\\\\\#/'      => '(?:\.\w+)*',
+                '/\\\\\.\\\\\#/'      => '(?:\.[\w-]+)*\.?',
                 // Multi-wildcard without separator prefix
-                '/(?<!\\\\\.)\\\\\#/' => '(?:|\w+(?:\.\w+)*)',
+                '/(?<!\\\\\.)\\\\\#/' => '(?:|[\w-]+(?:\.[\w-]+)*)\.?',
             ];
         } else {
             self::$replacements += [
                 // Multi-wildcard with separator prefix
-                '/\\\\\.#/'      => '(?:\.\w+)*',
+                '/\\\\\.#/'      => '(?:\.[\w-]+)*\.',
                 // Multi-wildcard without separator prefix
-                '/(?<!\\\\\.)#/' => '(?:|\w+(?:\.\w+)*)',
+                '/(?<!\\\\\.)#/' => '(?:|[\w-]+(?:\.[\w-]+)*)\.?',
             ];
         }
 
