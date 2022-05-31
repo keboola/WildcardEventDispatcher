@@ -162,3 +162,7 @@ Documentation for actual AMQP syntax may be found in the following packages:
  * [HornetQ](http://docs.jboss.org/hornetq/2.2.5.Final/user-manual/en/html/wildcard-syntax.html)
  * [RabbitMQ](http://www.rabbitmq.com/faq.html#wildcards-in-topic-exchanges)
  * [ZeroMQ](http://www.zeromq.org/whitepapers:message-matching)
+
+## License
+
+MIT licensed, see [LICENSE](./LICENSE) file.
